@@ -1,17 +1,17 @@
 #' Codon Extract
 #'
-#' @param input
-#
+#' @sequenceDNA string containing DNA sequence
+#' @codons sequence separated into codons
 #'
-#' @param start
-#'
-#' @return
+#' @return Input string separated into codons
 #' @export
 #'
 #' @examples
-name_me1 <- function(input, start = 1){
-  input_length <- nchar(input)
-  codons <- substring(input,
+#' codon_extract("ATGAAAATA")
+#' # output: "ATG AAA ATA"
+codon_extract <- function(sequenceDNA, start = 1){
+  input_length <- nchar(sequenceDNA)
+  codons <- substring(sequenceDNA,
                       first = seq(from = start, to = input_length-3+1, by = 3),
                       last = seq(from = 3+start-1, to = input_length, by = 3))
   return(codons)
