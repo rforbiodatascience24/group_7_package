@@ -81,3 +81,29 @@ plot_occurrence(sequence)
 ```
 
 ## Uses and considerations
+
+-   Used to simulate central dogma, eventually creating a visual output of amino acid occurrence.
+
+-   Can be tweaked to general handling of strings and occurrences.
+
+-   Dependencies, as the word implies, makes the package dependent on the quality of other packages.
+
+-   A bug in a dependency, can cause a bug in the package.
+
+-   More dependencies increase the size and load time.
+
+-   Time and consideration has been put in to specialized packages, such as ggplot - redoing functions from this package would cause unnecessary waste of time and energy, developing and troublehooting already existing advanced functions.
+
+-   Compatibility with other standards and packages, such as tidyverse, is ensured by utilizing already existing packages.
+
+-   `@importFrom package function` imports a specific function from a package, allowing us to call the function without specifying the function name
+
+    -   can be an advantage when function is used often
+
+    -   makes the code appear cleaner and more readable
+
+-   `package::function()` calls the function from the package as it is being used
+
+    -   makes it clear from which package it being called
+
+    -   keeps the namespace clean
