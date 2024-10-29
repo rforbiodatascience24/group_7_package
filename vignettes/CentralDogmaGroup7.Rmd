@@ -21,3 +21,55 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(CentralDogmaGroup7)
 ```
+
+## The functions
+
+### Function 1
+
+Description
+
+```{r}
+#Example
+```
+
+### Function 2
+
+Description
+
+```{r}
+#Example
+```
+
+### Function 3
+
+Description
+
+```{r}
+#Example
+```
+
+### Function 4
+
+Description
+
+```{r}
+#Example
+```
+
+### Function 5
+
+Description
+
+```{r}
+
+```
+
+#Example
+
+## Used in conjunction
+
+```{r}
+
+```
+
+## Uses and considerations
