@@ -22,11 +22,16 @@ knitr::opts_chunk$set(
 library(CentralDogmaGroup7)
 ```
 
+
+
+=======
 ## The functions
 
 ### Function 1
 
-Description
+
+Function 1 is a random DNA sequence generator. It takes an input size for the DNA sequence length, then makes a vector of the given length with any combination of "A", "T", "G", and "C" with replacement. Then it concatenates the vector to a string with no spaces between the letters and returns the concatenated string.
+
 
 ```{r}
 #Example
@@ -107,3 +112,4 @@ plot_occurrence(sequence)
     -   makes it clear from which package it being called
 
     -   keeps the namespace clean
+

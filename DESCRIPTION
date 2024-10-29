@@ -6,7 +6,11 @@ Authors@R:
   c(person(given = "Anne Sofie",
            family = "Jokumsen",
            role = c("aut", "cre"), # There must be a "cre", but there can only be one
-           email = "asjokumsen@gmail.com"), 
+           email = "asjokumsen@gmail.com"),
+    person(given = "Madeline",
+           family = "Shah",
+           role = "aut",
+           email = "madelineshah4@gmail.com"),
     person(given = "firstname",
            family = "lastname",
            role = "aut",
