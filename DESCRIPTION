@@ -1,0 +1,19 @@
+Package: CentralDogmaGroup7
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Authors@R:
+  c(person(given = "Anne Sofie",
+           family = "Jokumsen",
+           role = c("aut", "cre"), # There must be a "cre", but there can only be one
+           email = "asjokumsen@gmail.com"), 
+    person(given = "firstname",
+           family = "lastname",
+           role = "aut",
+           email = "your@email.com"))
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
