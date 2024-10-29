@@ -7,6 +7,10 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+## Link to repository
+
+<https://github.com/rforbiodatascience24/group_7_package>
+
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
