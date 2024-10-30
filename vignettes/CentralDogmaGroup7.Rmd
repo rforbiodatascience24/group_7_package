@@ -36,7 +36,7 @@ Function 1 is a random DNA sequence generator. It takes an input size for the DN
 ```{r}
 #Example
 random_DNA(3)
-random_DNA(5)
+random_DNA(5) 
 ```
 
 ### Function 2
