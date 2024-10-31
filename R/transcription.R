@@ -5,14 +5,13 @@
 #' @return Returns the transcribed string of DNA in the form of an RNA string
 #' @export
 #'
-#' @examples
-random_sequence <- paste(sample(c("A", "C", "G", "U"),
-                                50,
-                                replace = TRUE),
-                         collapse = "")
+#' @examples random_sequence <- paste(sample(c("A", "C", "G", "U"),
+#'                                           50, replace = TRUE),
+#'                                           collapse = "")
+#' transcription(random_sequence)
 
-transcription <- function(random_sequence){
+transcription <- function(concatenated_string){
   RNA <- gsub("T", "U",
-              random_sequence)
+              concatenated_string)
   return(RNA)
 }
