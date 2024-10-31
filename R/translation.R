@@ -13,23 +13,26 @@
 translation <- function(codons) {
   start_codon <- "AUG"
   stop_codons <- c("UAA", "UAG", "UGA")
-  
+
   # Determine where to start translation
-  start_index <- ifelse(any(codons == start_codon), which(codons == start_codon)[1], 1)
-  
+  start_index <- ifelse(any(codons == start_codon),
+                        which(codons == start_codon)[1], 1)
+
   # Extract codons starting from start_index
   codons <- codons[start_index:length(codons)]
-  
+
   # Translate codons, stopping at the first stop codon if encountered
   aa_seq <- ""
   for (codon in codons) {
     if (codon %in% stop_codons) break  # Stop translation at stop codon
     if (is.null(codon_table[[codon]])) {
-      warning(paste("Invalid codon:", codon))  # Skip invalid codons
+      warning(paste("Invalid codon:",
+                    codon))  # Skip invalid codons
       next
     }
-    aa_seq <- paste0(aa_seq, codon_table[[codon]])  # Translate valid codons
+    aa_seq <- paste0(aa_seq,
+                     codon_table[[codon]])  # Translate valid codons
   }
-  
+
   return(aa_seq)
 }
