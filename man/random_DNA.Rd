@@ -6,6 +6,9 @@
 \usage{
 random_DNA(string_length)
 }
+\arguments{
+\item{string_length}{input length of the random DNA}
+}
 \value{
 the concatenated sequence string of DNA
 }
