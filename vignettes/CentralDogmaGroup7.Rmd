@@ -1,6 +1,6 @@
 ---
 title: "CentralDogmaGroup7"
-output: rmarkdown::html_vignette
+output: rmarkdown::pdf_vignette
 vignette: >
   %\VignetteIndexEntry{CentralDogmaGroup7}
   %\VignetteEngine{knitr::rmarkdown}
