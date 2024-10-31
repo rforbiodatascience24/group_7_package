@@ -21,14 +21,15 @@ translation <- function(codons) {
   codons <- codons[start_index:length(codons)]
   
   # Translate codons, stopping at the first stop codon if encountered
-  aa_seq <- paste0(sapply(codons, function(codon) {
-    if (codon %in% stop_codons) return("")  # Stop translation at stop codon
-    if (is.null(codon_table[codon])) {
+  aa_seq <- ""
+  for (codon in codons) {
+    if (codon %in% stop_codons) break  # Stop translation at stop codon
+    if (is.null(codon_table[[codon]])) {
       warning(paste("Invalid codon:", codon))  # Skip invalid codons
-      return("")
+      next
     }
-    codon_table[codon]  # Translate valid codons
-  }), collapse = "")
+    aa_seq <- paste0(aa_seq, codon_table[[codon]])  # Translate valid codons
+  }
   
   return(aa_seq)
 }
