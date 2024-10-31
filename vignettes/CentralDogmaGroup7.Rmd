@@ -26,38 +26,17 @@ library(CentralDogmaGroup7)
 
 Function 1 is a random DNA sequence generator. It takes an input size for the DNA sequence length, then makes a vector of the given length with any combination of "A", "T", "G", and "C" with replacement. Then it concatenates the vector to a string with no spaces between the letters and returns the concatenated string.
 
-```{r}
-#Example
-random_DNA(3)
-random_DNA(5)
-```
-
 ### Function 2
 
 The `transcription_rna()` function is part of the central dogma simulation, designed to take a vector of DNA codons and convert it into their RNA form. It returns the complete RNA sequence.
-
-```{r}
-random_DNA_sequence <- paste(sample(c("A", "C", "G", "U"),
-                                          50, replace = TRUE),
-                                          collapse = "")
-transcription(random_DNA_sequence)
-```
 
 ### Function 3
 
 Function three, `codon_extractor()` converts a nucleic acid sequence into it's respective codons. It takes a string input (e.g. 'GCCATATAG') and returns a new string containing the codons of the input sequence (e.g. 'GCC ATA TAG').
 
-```{r}
-codon_extractor("ATTGATTTA")
-```
-
 ### Function 4
 
 The `translation()` function is part of the central dogma simulation, designed to take a vector of RNA codons and convert it into a protein sequence. It maps each codon to its corresponding amino acid using a codon table, concatenates the amino acids, and returns the complete protein sequencet.
-
-```{r}
-translation(c("AUG", "GCC", "AUG", "GCG"))
-```
 
 ### Function 5
 
@@ -65,24 +44,46 @@ The function `plot_occurrence()` is development around the central dogma, create
 
 It takes in a character string, splits it into individual characters, and creates a new string containing only the unique characters. Then, it counts the occurrence of each unique character, creating a data frame with the number of times each character appears. Finally, it plots the occurrence of each unique character in a bar plot.
 
-```{r}
-random_AA_sequence <- paste0(sample(c("A", "C", "D", "E", "F", "G", "H",
-                            "I", "K", "L", "M", "N", "P", "Q",
-                            "R", "S", "T", "V", "W", "Y"),
-                          1000,
-                          replace = TRUE),
-                   collapse = "")
-
-plot_occurrence(random_AA_sequence)
-
-```
-
 ## Used in conjunction
 
 Together, the above function simulate the central dogma from creating a DNA sequence, through transcription and translation, and analyzing the amino acid rate of occurrence.
 
-```{r}
+1.  A DNA sequence of the length 10.000 is created:
 
+```{r}
+#| output: false
+
+DNA <- random_DNA(10000)
+```
+
+2.  The DNA is transcribed into the coding strand of it's counterpart mRNA:
+
+```{r}
+#| output: false
+
+mRNA <- transcription(DNA)
+```
+
+3.  The mRNA sequence is divided into triplets:
+
+```{r}
+#| output: false
+
+codons <- codon_extractor(mRNA)
+```
+
+4.  The triplets are translated into a sequence of amino acids:
+
+```{r}
+#| output: false
+
+amino_acids <- translation(codons)
+```
+
+5.  The amino acids are quantified and their occurrence is plotted:
+
+```{r}
+plot_occurrence(amino_acids)
 ```
 
 ## Uses and considerations
