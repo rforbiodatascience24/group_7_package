@@ -16,7 +16,10 @@
 #' random_DNA(5)
 #' # possible output: "TCAGT"
 random_DNA <- function(string_length){
-  sample_vector <- sample(c("A", "T", "G", "C"), size = string_length, replace = TRUE)
-  concatenated_string <- paste0(sample_vector, collapse = "")
+  sample_vector <- sample(c("A", "T", "G", "C"),
+                          size = string_length,
+                          replace = TRUE)
+  concatenated_string <- paste0(sample_vector,
+                                collapse = "")
   return(concatenated_string)
 }

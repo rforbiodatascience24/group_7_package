@@ -8,6 +8,7 @@
 #' translate_rna(c("AUG", "GCC", "AUG", "GCG"))
 #' @export
 translate_rna <- function(codon_extractor) {
-  aa_seq <- paste0(codon_table[codons], collapse = "")
+  aa_seq <- paste0(codon_table[codons],
+                   collapse = "")
   return(aa_seq)
 }
