@@ -6,8 +6,13 @@
 #' @export
 #'
 #' @examples
-transcription <- function(concatenated_string){
+random_sequence <- paste(sample(c("A", "C", "G", "U"),
+                                50,
+                                replace = TRUE),
+                         collapse = "")
+
+transcription <- function(random_sequence){
   RNA <- gsub("T", "U",
-              concatenated_string)
+              random_sequence)
   return(RNA)
 }
