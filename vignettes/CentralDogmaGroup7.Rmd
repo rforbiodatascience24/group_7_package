@@ -53,10 +53,10 @@ codon_extractor("ATTGATTTA")
 
 ### Function 4
 
-The `translate_rna()` function is part of the central dogma simulation, designed to take a vector of RNA codons and convert it into a protein sequence. It maps each codon to its corresponding amino acid using a codon table, concatenates the amino acids, and returns the complete protein sequencet.
+The `translation()` function is part of the central dogma simulation, designed to take a vector of RNA codons and convert it into a protein sequence. It maps each codon to its corresponding amino acid using a codon table, concatenates the amino acids, and returns the complete protein sequencet.
 
 ```{r}
-translate_rna(c("AUG", "GCC", "AUG", "GCG"))
+translation(c("AUG", "GCC", "AUG", "GCG"))
 ```
 
 ### Function 5

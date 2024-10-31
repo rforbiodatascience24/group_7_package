@@ -8,15 +8,16 @@ codon_extractor(input_sequence, start = 1)
 }
 \arguments{
 \item{input_sequence}{a string containing a DNA/RNA sequence}
+
+\item{start}{a integer indicating starting position for codon extraction (default is one)}
 }
 \value{
-a string of codons constructed from input sequence
+a string of codons (triplets) constructed from input sequence
 }
 \description{
 Codon_extractor
 }
 \examples{
-# codon_extractor("ATTGATTTA")
-# output: "ATT GAT TTA"
+codon_extractor("ATTGATTTA")
 
 }
