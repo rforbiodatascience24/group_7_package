@@ -19,6 +19,10 @@ Authors@R:
            family = "Duraksoy",
            role = "aut",
            email = "s233415@dtu.dk"))
+    person(given = "Norbert",
+           family = "Bálint",
+           role = "aut",
+           email = "balintnorbert1@gmail.com"))
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: This package contains functions mimicking the central dogma of biochemistry.
 License: MIT + file LICENSE
