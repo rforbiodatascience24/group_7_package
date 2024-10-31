@@ -36,8 +36,8 @@ plot_occurrence <- function(amino_acid_sequence){
                                  fill = amino_acid_sequence)) +
     ggplot2::geom_col() +
     ggplot2::theme_bw() +
-    ggplot2::theme(legend.position = "none",
-                   axis.title.x = element_text("Amino acid"))
+    ggplot2::theme(legend.position = "none") +
+    ggplot2::xlab("Amino Acid")
 
   return(amino_acid_occurrence)
 }
