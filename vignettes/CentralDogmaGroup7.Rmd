@@ -88,28 +88,22 @@ plot_occurrence(amino_acids)
 
 ## Uses and considerations
 
--   Used to simulate central dogma, eventually creating a visual output of amino acid occurrence.
+### The central dogma
 
--   Can be tweaked to general handling of strings and occurrences.
+The code's use for simulating the central dogma, is limited. The opportunity to print the string after each individual step of the biological process, makes it a nice tool for understanding the basic principals. However, running the functions in succession multiple time, reveals a undesirable issue: the frequent occurrence of stop codons. In nature, these are sparsely distributed, but our `random_DNA()` function, takes no such thing into account. This leads to a high chance of translations being interrupted. If the initial function 1 is not run, however, the remaining functions of the code is capable of quantifying and visualizing the abundance of each amino acid while simulating the central dogma.
 
--   Dependencies, as the word implies, makes the package dependent on the quality of other packages.
+### Development
 
--   A bug in a dependency, can cause a bug in the package.
+The issue mentioned aboved, could be fixed by altering function 1 to take into account the natural occurrence of stop codons. This alteration would include utilizing real data to quantify the abundance of specific codons, and could be added to make the code better to simulate real life events.
 
--   More dependencies increase the size and load time.
+Another addition, if we want our code to better simulate reality, would be to include the concept of terminators for the transcription. Such addition would entail identifying palindromes, by tracking the characters of the DNA string and identifying inverted repeats.
 
--   Time and consideration has been put in to specialized packages, such as ggplot - redoing functions from this package would cause unnecessary waste of time and energy, developing and troublehooting already existing advanced functions.
+Many more such functions could be added, with the help of research on the subject, expanding the package to be able to identify sites of interest on both the DNA and mRNA sequence, eventually creating a package capable of more advanced bioinformatics.
 
--   Compatibility with other standards and packages, such as tidyverse, is ensured by utilizing already existing packages.
+### Dependencies
 
--   `@importFrom package function` imports a specific function from a package, allowing us to call the function without specifying the function name
+Dependencies, as the word implies, makes the package dependent on the quality of other packages. There are both pros and cons to this. E.g. a bug in a dependency, can cause a bug in the package, and more dependencies increase the size and load time. On the other hand, time and consideration has been put into specialized packages, such as ggplot, and redoing functions from this package would cause unnecessary waste of time. Often, the functions we wish to use already exists in other packages. Furthermore, compatibility with other standards and packages, such as tidyverse, is ensured by utilizing already existing packages.
 
-    -   can be an advantage when function is used often
+Applying the above mentioned ideas, would probably be a lot faster using already existing functions from previously developed packages, allowing us to focus on collecting necessary functions for the specific purpose of our package.
 
-    -   makes the code appear cleaner and more readable
-
--   `package::function()` calls the function from the package as it is being used
-
-    -   makes it clear from which package it being called
-
-    -   keeps the namespace clean
+When using dependencies, it is important to consider the difference between `@importFrom package function` and `package::function()`. `@importFrom package function` imports a specific function from a package, allowing us to call the function without specifying the function name. It can be an advantage when a function is used often and makes the code appear cleaner and more readable. `package::function()` calls the function from the package as it is being used. This makes it clear in the script from which package it being called and keeps the namespace clean, allowing for easier editing of the package later on.
