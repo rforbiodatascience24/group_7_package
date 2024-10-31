@@ -6,7 +6,7 @@ Authors@R:
   c(person(given = "Anne Sofie",
            family = "Jokumsen",
            role = c("aut", "cre"), # There must be a "cre", but there can only be one
-           email = "asjokumsen@gmail.com")),
+           email = "asjokumsen@gmail.com"),
     person(given = "Madeline",
            family = "Shah",
            role = "aut",
@@ -22,7 +22,7 @@ Authors@R:
     person(given = "Norbert",
            family = "Bálint",
            role = "aut",
-           email = "balintnorbert1@gmail.com")
+           email = "balintnorbert1@gmail.com"))
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: This package contains functions mimicking the central dogma of biochemistry.
 License: MIT + file LICENSE
