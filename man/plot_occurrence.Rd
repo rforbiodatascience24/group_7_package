@@ -10,13 +10,17 @@ plot_occurrence(amino_acid_sequence)
 \item{amino_acid_sequence}{A character string containing a sequence of amino acids.}
 }
 \value{
-A histogram plot of the occurence of each unique amino acid.
+A barplot of the occurence of each unique amino acid.
 }
 \description{
 Plot the occurrences within an amino acid sequence
 }
 \examples{
-sequence <- "ACDEFGHIKLMNPQRSTVWYACDEFGHIKLMN"
+sequence <- paste0(sample(c("A", "C", "D", "E", "F", "G", "H",
+                                      "I", "K", "L", "M", "N", "P", "Q",
+                                      "R", "S", "T", "V", "W", "Y"),
+                                      1000, replace = TRUE), collapse = "")
+
 plot_occurrence(sequence)
 
 }

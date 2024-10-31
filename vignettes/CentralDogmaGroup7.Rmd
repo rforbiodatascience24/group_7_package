@@ -22,16 +22,9 @@ knitr::opts_chunk$set(
 library(CentralDogmaGroup7)
 ```
 
-
-
-=======
-## The functions
-
 ### Function 1
 
-
 Function 1 is a random DNA sequence generator. It takes an input size for the DNA sequence length, then makes a vector of the given length with any combination of "A", "T", "G", and "C" with replacement. Then it concatenates the vector to a string with no spaces between the letters and returns the concatenated string.
-
 
 ```{r}
 #Example
@@ -49,8 +42,7 @@ Description
 
 ### Function 3
 
-Function three, `codon_extractor()` converts a nucleic acid sequence into it's respective codons. It takes a string input (e.g. 'GCCATATAG') and returns a new string containing the codons of the input sequence (e.g. 'GCC ATA TAG'). 
-Function three, `codon_extractor()` converts a nucleic acid sequence into it's respective codons. It takes a string input and returns a new string containing the codons of the input sequence. 
+Function three, `codon_extractor()` converts a nucleic acid sequence into it's respective codons. It takes a string input (e.g. 'GCCATATAG') and returns a new string containing the codons of the input sequence (e.g. 'GCC ATA TAG'). Function three, `codon_extractor()` converts a nucleic acid sequence into it's respective codons. It takes a string input and returns a new string containing the codons of the input sequence.
 
 ```{r}
 #Example
@@ -116,4 +108,3 @@ plot_occurrence(sequence)
     -   makes it clear from which package it being called
 
     -   keeps the namespace clean
-
