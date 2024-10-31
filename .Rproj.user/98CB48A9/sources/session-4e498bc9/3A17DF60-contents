@@ -1,0 +1,19 @@
+---
+title: "CentralDogmaGroup7"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{CentralDogmaGroup7}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(CentralDogmaGroup7)
+```

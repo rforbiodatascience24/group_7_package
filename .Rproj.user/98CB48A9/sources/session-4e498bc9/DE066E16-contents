@@ -1,0 +1,112 @@
+---
+title: "CentralDogmaGroup07"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{CentralDogmaGroup07}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(CentralDogmaGroup7)
+```
+Link to repository
+
+https://github.com/rforbiodatascience24/group_7_package
+
+{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+{r setup}
+library(CentralDogmaGroup7)
+
+Function 1
+
+Function 1 is a random DNA sequence generator. It takes an input size for the DNA sequence length, then makes a vector of the given length with any combination of "A", "T", "G", and "C" with replacement. Then it concatenates the vector to a string with no spaces between the letters and returns the concatenated string.
+
+Function 2
+
+The transcription_rna() function is part of the central dogma simulation, designed to take a vector of DNA codons and convert it into their RNA form. It returns the complete RNA sequence.
+
+Function 3
+
+Function three, codon_extractor() converts a nucleic acid sequence into it's respective codons. It takes a string input (e.g. 'GCCATATAG') and returns a new string containing the codons of the input sequence (e.g. 'GCC ATA TAG').
+
+Function 4
+
+The translation() function is part of the central dogma simulation, designed to take a vector of RNA codons and convert it into a protein sequence. It maps each codon to its corresponding amino acid using a codon table, concatenates the amino acids, and returns the complete protein sequence.
+
+Function 5
+
+The function plot_occurrence() is development around the central dogma, created with the intention of taking in an amino acid sequence, and outputting a plot of the occurrence of each amino acid.
+
+It takes in a character string, splits it into individual characters, and creates a new string containing only the unique characters. Then, it counts the occurrence of each unique character, creating a data frame with the number of times each character appears. Finally, it plots the occurrence of each unique character in a bar plot.
+
+Used in conjunction
+
+Together, the above function simulate the central dogma from creating a DNA sequence, through transcription and translation, and analyzing the amino acid rate of occurrence.
+
+A DNA sequence of the length 10.000 is created:
+
+{r}
+#| output: false
+
+DNA <- random_DNA(10000)
+
+The DNA is transcribed into the coding strand of it's counterpart mRNA:
+
+{r}
+#| output: false
+
+mRNA <- transcription(DNA)
+
+The mRNA sequence is divided into triplets:
+
+{r}
+#| output: false
+
+codons <- codon_extractor(mRNA)
+
+The triplets are translated into a sequence of amino acids:
+
+{r}
+#| output: false
+
+amino_acids <- translation(codons)
+
+The amino acids are quantified and their occurrence is plotted:
+
+{r}
+plot_occurrence(amino_acids)
+
+Uses and considerations
+
+The central dogma
+
+The code's use for simulating the central dogma, is limited. The opportunity to print the string after each individual step of the biological process, makes it a nice tool for understanding the basic principals. However, running the functions in succession multiple time, reveals a undesirable issue: the frequent occurrence of stop codons. In nature, these are sparsely distributed, but our random_DNA() function, takes no such thing into account. This leads to a high chance of translations being interrupted. If the initial function 1 is not run, however, the remaining functions of the code is capable of quantifying and visualizing the abundance of each amino acid while simulating the central dogma.
+
+Development
+
+The issue mentioned aboved, could be fixed by altering function 1 to take into account the natural occurrence of stop codons. This alteration would include utilizing real data to quantify the abundance of specific codons, and could be added to make the code better to simulate real life events.
+
+Another addition, if we want our code to better simulate reality, would be to include the concept of terminators for the transcription. Such addition would entail identifying palindromes, by tracking the characters of the DNA string and identifying inverted repeats.
+
+Many more such functions could be added, with the help of research on the subject, expanding the package to be able to identify sites of interest on both the DNA and mRNA sequence, eventually creating a package capable of more advanced bioinformatics.
+
+Dependencies
+
+Dependencies, as the word implies, makes the package dependent on the quality of other packages. There are both pros and cons to this. E.g. a bug in a dependency, can cause a bug in the package, and more dependencies increase the size and load time. On the other hand, time and consideration has been put into specialized packages, such as ggplot, and redoing functions from this package would cause unnecessary waste of time. Often, the functions we wish to use already exists in other packages. Furthermore, compatibility with other standards and packages, such as tidyverse, is ensured by utilizing already existing packages.
+
+Applying the above mentioned ideas, would probably be a lot faster using already existing functions from previously developed packages, allowing us to focus on collecting necessary functions for the specific purpose of our package.
+
+When using dependencies, it is important to consider the difference between @importFrom package function and package::function(). @importFrom package function imports a specific function from a package, allowing us to call the function without specifying the function name. It can be an advantage when a function is used often and makes the code appear cleaner and more readable. package::function() calls the function from the package as it is being used. This makes it clear in the script from which package it being called and keeps the namespace clean, allowing for easier editing of the package later on.

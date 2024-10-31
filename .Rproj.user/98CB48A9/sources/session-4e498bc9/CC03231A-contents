@@ -1,0 +1,512 @@
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11)) +
+geom_boxplot()
+?geom_geimplot()
+?geom_geomplot()
+?geom_boxplot
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = event_label)) +
+geom_boxplot()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = event_label)) +
+geom_density(kernel = "gaussian")
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = event_label, color = even_label)) +
+geom_density(kernel = "gaussian")
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = event_label, color = event_label)) +
+geom_density(kernel = "gaussian")
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = event_label, color = event_label)) +
+geom_density(kernel = "gaussian") +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients",
+subtitle = "Data set of Gravier et al. (2010)",
+x = "g7D11 expression level, log2 transformed", y = "Density",
+color = "Event after diagnosis"
+)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = event_label, color = event_label)) +
+geom_density(kernel = "gaussian") +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients",
+subtitle = "Data set of Gravier et al. (2010)",
+x = "g7D11 expression level", y = "Density",
+color = "Event after diagnosis"
+)
+?ggplot(aes)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = event_label, color = event_label)) +
+geom_density(kernel = "gaussian") +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients",
+subtitle = "Data set of Gravier et al. (2010)",
+x = "g7D11 expression level", y = "Density",
+color = "Event after diagnosis"
+) +
+scale_color_colorblind()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = event_label, color = event_label)) +
+geom_density(kernel = "gaussian") +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients",
+subtitle = "Data set of Gravier et al. (2010)",
+x = "g7D11 expression level", y = "Density",
+color = "Event after diagnosis"
+)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = event_label, color = event_label)) +
+geom_density(kernel = "gaussian") +
+scale_color_manual(
+values = c(
+good = "#9AE847",
+poor = "#EC6475") +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients",
+subtitle = "Data set of Gravier et al. (2010)",
+x = "g7D11 expression level", y = "Density",
+color = "Event after diagnosis"
+)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = event_label, color = event_label)) +
+geom_density(kernel = "gaussian") +
+scale_color(
+values = c(
+good = "#9AE847",
+poor = "#EC6475") +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients",
+subtitle = "Data set of Gravier et al. (2010)",
+x = "g7D11 expression level", y = "Density",
+color = "Event after diagnosis"
+)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = event_label, color = event_label)) +
+geom_density(kernel = "gaussian") +
+scale_color(
+values = c(
+good = "#9AE847",
+poor = "#EC6475")) +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients",
+subtitle = "Data set of Gravier et al. (2010)",
+x = "g7D11 expression level", y = "Density",
+color = "Event after diagnosis"
+)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = event_label, color = event_label)) +
+geom_density(kernel = "gaussian") +
+scale_color_manual(
+values = c(
+good = "#9AE847",
+poor = "#EC6475")) +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients",
+subtitle = "Data set of Gravier et al. (2010)",
+x = "g7D11 expression level", y = "Density",
+color = "Event after diagnosis"
+)
+?scale
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = event_label,
+color = event_label)) +
+geom_density(kernel = "gaussian") +
+scale_color_manual(
+values = c(
+good = "#9AE847",
+poor = "#EC6475")) +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients",
+subtitle = "Data set of Gravier et al. (2010)",
+x = "g7D11 expression level",
+y = "Density",
+color = "Event after diagnosis"
+)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = event_label,
+color = event_label)) +
+geom_density(kernel = "gaussian") +
+scale_color_manual(
+values = c(
+good = "#9AE847",
+poor = "#EC6475")) +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients",
+subtitle = "Data set of Gravier et al. (2010)",
+x = "g7D11 expression level",
+y = "Density",
+color = "Event after diagnosis"
+)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = age)) +
+geom_boxplot()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = age, group = event_label)) +
+geom_boxplot()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = (age, event_label))) +
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = age)) +
+geom_boxplot(aes(group = event_label))
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = age),
+fill = event_label) +
+geom_boxplot()
+mapping = aes(x = g7D11, group = event_label,
+color = event_label)) +
+#| output: false
+target_url <- "https://github.com/ramhiser/datamicroarray/raw/master/data/gravier.RData"
+output_file <- "data/gravier.RData"
+curl::curl_download(url = target_url, destfile = output_file)
+load(output_file)
+library(tidyverse)
+#| output: false
+set.seed(676571)
+cancer_data=mutate(as_tibble(pluck(gravier,"x")),y=pluck(gravier,"y"),pt_id=1:length(pluck(gravier, "y")),age=round(rnorm(length(pluck(gravier,"y")),mean=55,sd=10),1))
+cancer_data=rename(cancer_data,event_label=y)
+cancer_data$age_group=cut(cancer_data$age,breaks=seq(10,100,by=10))
+cancer_data=relocate(cancer_data,c(pt_id,age,age_group,pt_id,event_label))
+cancer_data
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = event_label,
+color = event_label)) +
+geom_density(kernel = "gaussian") +
+scale_color_manual(
+values = c(
+good = "#9AE847",
+poor = "#EC6475")) +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients",
+subtitle = "Data set of Gravier et al. (2010)",
+x = "g7D11 expression level",
+y = "Density",
+color = "Event after diagnosis"
+)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, group = event_label)) +
+geom_boxplot()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age)) +
+geom_boxplot()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age_group)) +
+geom_boxplot()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age_group, color = even_label),
+geom_boxplot()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age_group, color = even_label)) +
+geom_boxplot()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age_group, color = event_label)) +
+geom_boxplot()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age_group, color = event_label, alpha = 0.5)) +
+geom_boxplot()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age_group, fill = event_label)) +
+geom_boxplot()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age_group, fill = event_label, alpha = 0.5)) +
+geom_boxplot()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age_group, fill = event_label, alpha = 0.1)) +
+geom_boxplot()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age_group, fill = event_label, alpha = 0.1)) +
+geom_boxplot() +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients",
+subtitle = "Data is grouped by age",
+x = "g7D11 expression level",
+y = "Age group",
+fill = "Event after diagnosis",
+guides(alpha = none)
+)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age_group, fill = event_label, alpha = 0.1)) +
+geom_boxplot() +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients",
+subtitle = "Data is grouped by age",
+x = "g7D11 expression level",
+y = "Age group",
+fill = "Event after diagnosis",
+guides(alpha = "none")
+)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age_group, fill = event_label, alpha = 0.1)) +
+geom_boxplot() +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients",
+subtitle = "Data is grouped by age",
+x = "g7D11 expression level",
+y = "Age group",
+fill = "Event after diagnosis") +
+guides(alpha = "none")
+)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age_group, fill = event_label, alpha = 0.1)) +
+geom_boxplot() +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients",
+subtitle = "Data is grouped by age",
+x = "g7D11 expression level",
+y = "Age group",
+fill = "Event after diagnosis") +
+guides(alpha = "none")
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age_group, fill = event_label, alpha = 0.1)) +
+geom_boxplot() +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients",
+subtitle = "Data is grouped by age",
+x = "g7D11 expression level",
+y = "Age group",
+fill = "Event after diagnosis") +
+guides(alpha = "none") +
+scale_fill_manual(
+values = c(
+good = "#9AE847",
+poor = "#EC6475")) +
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age_group, fill = event_label, alpha = 0.1)) +
+geom_boxplot() +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients",
+subtitle = "Data is grouped by age",
+x = "g7D11 expression level",
+y = "Age group",
+fill = "Event after diagnosis") +
+guides(alpha = "none") +
+scale_fill_manual(
+values = c(
+good = "#9AE847",
+poor = "#EC6475"))
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11)) +
+geom_scatter()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11)) +
+geom_point()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age)) +
+geom_point()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age, color = event_label)) +
+geom_point()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm")
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = false)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = false)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE)
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients by age",
+x = "g7D11 expression level",
+y = "Age",
+color = "Event after diagnosis") +
+scale_color_manual(
+values = c(
+good = "#9AE847",
+poor = "#EC6475"))
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE)
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients by age",
+x = "g7D11 expression level",
+y = "Age",
+color = "Event after diagnosis") +
+scale_color_manual(
+values = c(
+good = "#9AE847",
+poor = "#EC6475")
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age, color = event_label)) +
+geom_point() +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients by age",
+x = "g7D11 expression level",
+y = "Age",
+color = "Event after diagnosis") +
+scale_color_manual(
+values = c(
+good = "#9AE847",
+poor = "#EC6475") +
+geom_smooth(method = "lm", se = FALSE)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = age, color = event_label)) +
+geom_point() +
+labs(
+title = "Expression level of g7D11 in small node-negative breast carcinoma patients by age",
+x = "g7D11 expression level",
+y = "Age",
+color = "Event after diagnosis") +
+scale_color_manual(
+values = c(
+good = "#9AE847",
+poor = "#EC6475")) +
+geom_smooth(method = "lm", se = FALSE)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09)) +
+geom_point()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE) +
+facet_grid(.~fl)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE) +
+facet_grid(.~fl, labeller = age_group)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE) +
+facet_grid(.~age_group)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE) +
+facet_grid(age_group.~)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE) +
+facet_grid(age_group.~)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE) +
+facet_grid(.~)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE) +
+facet_grid(age_group)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE) +
+facet_grid(age_group.~)
+?facet_grid
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE) +
+facet_wrap(age_group)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE) +
+facet_wrap(age_group)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE) +
+facet_grid()
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE) +
+facet_grid(age_group)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE) +
+facet_grid(rows = vars(age_group)
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE) +
+facet_grid(rows = cancer_data(age_group))
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point() +
+geom_smooth(method = "lm", se = FALSE) +
+facet_grid(rows = vars(age_group))
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point() +
+labs(
+title = "Expression level of g2E09 over g7D11 in small node-negative breast carcinoma patients by age",
+subtitle = "Diveded into age groups",
+x = "g7D11 expression level",
+y = "g2E09 expression level",
+color = "Event after diagnosis") +
+scale_color_manual(
+values = c(
+good = "#9AE847",
+poor = "#EC6475")) +
+geom_smooth(method = "lm", se = FALSE) +
+facet_grid(rows = vars(age_group))
+ggplot(data = cancer_data,
+mapping = aes(x = g7D11, y = g2E09, color = event_label)) +
+geom_point() +
+labs(
+title = "Expression level of g2E09 over g7D11 in small node-negative breast carcinoma patients by age",
+subtitle = "Divided into age groups",
+x = "g7D11 expression level",
+y = "g2E09 expression level",
+color = "Event after diagnosis") +
+scale_color_manual(
+values = c(
+good = "#9AE847",
+poor = "#EC6475")) +
+geom_smooth(method = "lm", se = FALSE) +
+facet_grid(rows = vars(age_group))
+#| output: false
+library("tidyverse")
+library("RColorBrewer")
+base_url <- "http://userweb.eng.gla.ac.uk/umer.ijaz/bioinformatics/ecological/"
+raw_data_path <- "data/"
+SPE <- read_csv(file = str_c(base_url, "SPE_pitlatrine.csv"))
+write_csv(x = SPE,
+file = str_c(raw_data_path, "SPE_pitlatrine.csv"))
+ENV <- read_csv(file = str_c(base_url, "ENV_pitlatrine.csv"))
+write_csv(x = ENV,
+file = str_c(raw_data_path, "ENV_pitlatrine.csv"))
+#| output: false
+SPE |>
+pivot_longer(cols = -Taxa,
+names_to = "Samples",
+values_to = "OTU_Count")  |>
+full_join(ENV, by = "Samples") |>
+mutate(site = case_when(str_detect(Samples, "^T") ~ "Tanzania",
+str_detect(Samples, "^V") ~ "Vietnam")) |>
+write_tsv(file = "data/SPE_ENV.tsv")
+#| output: false
+targets <- c("Methanobacteria", "Clostridia", "Actinobacteria",
+"Sphingobacteria", "Anaerolineae")
+SPE_ENV_targets <- SPE_ENV |>
+filter(Taxa %in% targets)
+#| output: false
+SPE_ENV <- read_tsv(file = "data/SPE_ENV.tsv")
+targets <- c("Methanobacteria", "Clostridia", "Actinobacteria",
+"Sphingobacteria", "Anaerolineae")
+SPE_ENV_targets <- SPE_ENV |>
+filter(Taxa %in% targets)

@@ -1,0 +1,83 @@
+---
+title: "CentralDogmaGroup7"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{CentralDogmaGroup7}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Link to repository
+
+<https://github.com/rforbiodatascience24/group_7_package>
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(CentralDogmaGroup7)
+```
+
+## The functions
+
+### Function 1
+
+Description
+
+```{r}
+#Example
+```
+
+### Function 2
+
+Description
+
+```{r}
+#Example
+```
+
+### Function 3
+
+Description
+
+```{r}
+#Example
+```
+
+### Function 4
+
+Description
+
+```{r}
+#Example
+```
+
+### Function 5
+
+The function `plot_occurrence()` is development around the central dogma, created with the intention of taking in an amino acid sequence, and outputting a plot of the occurrence of each amino acid.
+
+It takes in a character string, splits it into individual characters, and creates a new string containing only the unique characters. Then, it counts the occurrence of each unique character, creating a data frame with the number of times each character appears. Finally, it plots the occurrence of each unique character in a bar plot.
+
+```{r}
+sequence <- paste0(sample(c("A", "C", "D", "E", "F", "G", "H",
+                            "I", "K", "L", "M", "N", "P", "Q",
+                            "R", "S", "T", "V", "W", "Y"),
+                          1000,
+                          replace = TRUE),
+                   collapse = "")
+
+plot_occurrence(sequence)
+
+```
+
+## Used in conjunction
+
+```{r}
+
+```
+
+## Uses and considerations
