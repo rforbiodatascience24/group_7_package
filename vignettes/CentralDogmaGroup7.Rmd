@@ -50,9 +50,11 @@ Description
 ### Function 3
 
 Function three, `codon_extractor()` converts a nucleic acid sequence into it's respective codons. It takes a string input (e.g. 'GCCATATAG') and returns a new string containing the codons of the input sequence (e.g. 'GCC ATA TAG'). 
+Function three, `codon_extractor()` converts a nucleic acid sequence into it's respective codons. It takes a string input and returns a new string containing the codons of the input sequence. 
 
 ```{r}
 #Example
+codon_extractor('ATTGATTAG')
 ```
 
 ### Function 4
