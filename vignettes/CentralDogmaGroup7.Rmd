@@ -1,8 +1,8 @@
 ---
-title: "CentralDogmaGroup7"
-output: rmarkdown::pdf_document
+title: "CentralDogmaGroup07"
+output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{CentralDogmaGroup7}
+  %\VignetteIndexEntry{CentralDogmaGroup07}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

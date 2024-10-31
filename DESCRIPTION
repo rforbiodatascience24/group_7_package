@@ -1,12 +1,12 @@
 Package: CentralDogmaGroup7
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Central Dogma Simulator
 Version: 0.1.0
 Authors@R:
   c(person(given = "Anne Sofie",
            family = "Jokumsen",
            role = c("aut", "cre"), # There must be a "cre", but there can only be one
-           email = "asjokumsen@gmail.com"),
+           email = "asjokumsen@gmail.com")),
     person(given = "Madeline",
            family = "Shah",
            role = "aut",
@@ -18,11 +18,11 @@ Authors@R:
     person(given = "Bedri Burak",
            family = "Duraksoy",
            role = "aut",
-           email = "s233415@dtu.dk"))
+           email = "s233415@dtu.dk")
     person(given = "Norbert",
            family = "Bálint",
            role = "aut",
-           email = "balintnorbert1@gmail.com"))
+           email = "balintnorbert1@gmail.com")
 Maintainer: The package maintainer <yourself@somewhere.net>
 Description: This package contains functions mimicking the central dogma of biochemistry.
 License: MIT + file LICENSE
