@@ -18,7 +18,7 @@ Authors@R:
     person(given = "Bedri Burak",
            family = "Duraksoy",
            role = "aut",
-           email = "s233415@dtu.dk")
+           email = "s233415@dtu.dk"),
     person(given = "Norbert",
            family = "Bálint",
            role = "aut",
